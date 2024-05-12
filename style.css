@@ -27,19 +27,54 @@ body{
 .card{
     background-color: var(--card-bg);
     text-align: center;
-    padding: 2rem;
-    margin: 2rem 0;
+    width: 400px;
+    height: 600px;
     box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
     border-radius: 1rem;
+    margin: 2rem 0;
 }
 
-.img img{
+.img {
+    position: relative;
     width: 300px;
+    height: 300px;
+    left: 50px;
+    top: 20px;
     border-radius: 1rem;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.img .equilibrium{
+    width: 300px;
+    border-radius: 1rem; 
+    z-index: 1;
+}
+
+.img .view {
+    position: absolute;
+    left: 120px;
+    top: 130px;
+    width: 70px;
+    cursor: pointer;
+    visibility: hidden;
+}
+
+.img:hover {
+    z-index: 9999;
+    background-color: hsl(215, 51%, 70%);
+}
+
+.img:hover .equilibrium {
+    opacity: .5;
+}
+
+.img:hover .view {
+    visibility: visible;
 }
 
 .texto {
-    padding: 1.5rem 0;
+    padding: 3rem 2rem;
 }
 
 .texto h1 {
@@ -49,8 +84,8 @@ body{
     font-size: 1.5rem;
     cursor: pointer;
     transition: .3s;
-    padding: 0 3rem;
     text-align: start;
+    margin-bottom: .5rem;
 }
 
 .texto h1:hover {
@@ -59,7 +94,6 @@ body{
 
 .texto p {
     color: #9d9d9d;
-    padding: .5rem 3rem;
     font-size: 18px;
     text-align: start;
 }
@@ -68,7 +102,7 @@ body{
    display: flex;
    align-items: center;
    justify-content: space-between;
-   padding: 0 3rem 1rem;
+   padding:  0 2rem;
 }
 
 
@@ -101,15 +135,14 @@ body{
 
 .line {
     border: 1px solid var(--line);
-    margin: 1rem 0;
-    padding: 0 3rem;
+    margin: 1rem 2rem;
 }
 
 .avatar {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding: 0 3rem;
+    padding: 0 2rem;
 }
 
 .avatar img {
@@ -126,3 +159,53 @@ body{
     color: #fff;
 }
 
+@media (max-width: 900px) {
+    .card {
+        width: 400px;
+        height: 630px;
+        margin: 5rem 0;
+    }
+
+    .img {
+        width: 300px;
+        height: 300px;
+        left: 60px;
+        top: 20px;
+    }
+
+    .img img{
+        width: 300px;
+    }
+
+    .img .view {
+        left: 125px;
+        top: 140px;
+        width: 50px;
+    }
+
+    
+    .texto {
+        padding: 3rem 4rem;
+    }
+
+    .texto h1{
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .texto p{
+        font-size: 1rem;
+    }
+
+    .items {
+        padding: 0 3rem;
+    }
+
+    .line {
+        margin: 1rem 3rem;
+    }
+
+    .avatar {
+        padding: 0 3rem;
+    }
+}
