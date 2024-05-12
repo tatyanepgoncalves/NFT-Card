@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+	--blue: hsl(215, 51%, 70%);
+	--cyan: hsl(178, 100%, 50%);
+	--main-bg: hsl(217, 54%, 11%);
+	--card-bg: hsl(216, 50%, 16%);
+	--line: hsl(215, 32%, 27%);
+}
+
+*{
+    font-family: "Outfit", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 100%;
+    max-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-bg);
+}
+
+.card{
+    background-color: var(--card-bg);
+    text-align: center;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 1rem;
+}
+
+.img img{
+    width: 300px;
+    border-radius: 1rem;
+}
+
+.texto {
+    padding: 1.5rem 0;
+}
+
+.texto h1 {
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: .3s;
+    padding: 0 3rem;
+    text-align: start;
+}
+
+.texto h1:hover {
+    color: var(--cyan);
+}
+
+.texto p {
+    color: #9d9d9d;
+    padding: .5rem 3rem;
+    font-size: 18px;
+    text-align: start;
+}
+
+.items {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 3rem 1rem;
+}
+
+
+.value {
+    color: var(--cyan);
+}
+
+.days {
+    color: var(--blue);
+}
+
+
+.value {
+    display: flex;
+    align-items: center;
+    
+}
+
+.value span,
+.days span {
+    margin-left: 10px;
+}
+
+.days{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+    color: var(--blue);
+}
+
+.line {
+    border: 1px solid var(--line);
+    margin: 1rem 0;
+    padding: 0 3rem;
+}
+
+.avatar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0 3rem;
+}
+
+.avatar img {
+    width: 50px;
+    border: 3px solid #fff;
+    border-radius: 50%;
+}
+
+.avatar span {
+    color: var(--blue);
+}
+
+.avatar span strong {
+    color: #fff;
+}
+
